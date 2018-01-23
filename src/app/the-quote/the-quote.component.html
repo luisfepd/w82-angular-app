@@ -1,0 +1,20 @@
+<section>
+  <div class="container">
+    <h1 class="title">Quote of The Day</h1>
+    <div class="columns">
+      <div class="column content">
+        <blockquote>{{myQuote.quote}}</blockquote>
+        <small>- {{myQuote.by}}</small>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+<section>
+  <div class="container">
+    <h1 class="title">Favourites</h1>
+    <div class="columns">
+      <app-quote-tile *ngFor="let item of favourites" [quote]="item" (authorClick)="showAuthorFromParent($event)"></app-quote-tile>
+    </div>
+  </div>
+</section>
